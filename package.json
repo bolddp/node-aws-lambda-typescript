@@ -1,0 +1,28 @@
+{
+  "name": "node-aws-lambda-typescript",
+  "version": "1.0.0",
+  "description": "Demo project for a Node.js application written in Typescript, deployable to AWS Lambda",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsc && node dist/devServer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bolddp/node-aws-lambda-typescript.git"
+  },
+  "author": "Daniel Persson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bolddp/node-aws-lambda-typescript/issues"
+  },
+  "homepage": "https://github.com/bolddp/node-aws-lambda-typescript#readme",
+  "dependencies": {
+    "aws-serverless-express": "^3.3.5",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "@types/aws-serverless-express": "^3.3.0",
+    "@types/express": "^4.16.1"
+  }
+}
