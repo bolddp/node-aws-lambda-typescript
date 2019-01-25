@@ -1,2 +1,8 @@
 dist/
 node_modules/
+
+cloudformation.yml
+proxy-definition.yml
+custom-deploy-to-aws.sh
+lambda.zip
+serverless.yml
