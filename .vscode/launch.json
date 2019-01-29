@@ -7,6 +7,23 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "Unit tests (mocha)",
+      "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+      "args": [
+        "-r",
+        "ts-node/register",
+        "--timeout",
+        "999999",
+        "--colors",
+        "${workspaceFolder}/test/**/*_test.ts",
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "protocol": "inspector"
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "Launch dev server",
       "program": "${workspaceFolder}\\dist\\devServer.js",
       "preLaunchTask": "tsc: build - tsconfig.json",

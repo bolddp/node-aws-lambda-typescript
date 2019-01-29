@@ -1,9 +1,9 @@
 import { Router, Request, Response } from "express";
+import greetingService from "../service/greetingService";
 
 export function greetingRouter(router: Router = Router()) {
   router.get('/', (req: Request, rsp: Response) => {
-    const name = req.query && req.query.name ? req.query.name : 'John Doe';
-    rsp.status(200).json({ message: `Well hello, ${name}!`});
+    rsp.status(200).send(greetingService.getGreetingMessage(req.query.name));
   });
   return router;
 }
