@@ -6,7 +6,7 @@
       "module": "commonjs",
       "target": "es6",
       "lib": ["es6"],
-      "types": ["mocha"]
+      "types": ["mocha", "node"]
   },
   "include": [
       "./src/**/*"
