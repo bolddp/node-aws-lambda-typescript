@@ -5,6 +5,7 @@
   "main": "handler.js",
   "scripts": {
     "test": "mocha -r ts-node/register test/**/*_test.ts",
+    "coverage": "nyc --require ts-node/register --require source-map-support/register mocha test/**/*Test.ts",
     "dev": "tsc && node dist/devServer.js",
     "prod-build": "node ./node_modules/typescript/bin/tsc --sourcemap false"
   },
@@ -37,7 +38,20 @@
     "@types/node": "^11.9.4",
     "chai": "^4.2.0",
     "mocha": "^5.2.0",
+    "nyc": "^14.1.1",
     "ts-node": "^8.0.2",
     "typescript": "^3.2.4"
+  },
+  "nyc": {
+    "extension": [
+      ".ts",
+      ".tsx"
+    ],
+    "include": "src",
+    "reporter": [
+      "html",
+      "text-summary"
+    ],
+    "all": true
   }
 }

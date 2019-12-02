@@ -1,5 +1,7 @@
 dist/
 node_modules/
+.nyc_output/
+coverage/
 
 cloudformation.yml
 proxy-definition.yml
